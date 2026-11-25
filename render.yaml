@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: clipforge-ai
+    runtime: docker
+    plan: free
+    healthCheckPath: /_stcore/health
+    envVars:
+      - key: OMP_NUM_THREADS
+        value: "1"
